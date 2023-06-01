@@ -25,9 +25,10 @@ void removeNumberTest() {
 	@Test
 void binarySearchTest() {
 	int[] src = {2, 4, 3, 7, 6, 5, 1, 6, 4};
-	assertEquals(0, Arrays.binarySearch(src, 2));
-	assertEquals(1, Arrays.binarySearch(src, 4));
-	assertEquals(4, Arrays.binarySearch(src, 6));
+	Arrays.sort(src);
+	assertEquals(1, Arrays.binarySearch(src, 2));
+	assertEquals(4, Arrays.binarySearch(src, 4));
+	assertEquals(6, Arrays.binarySearch(src, 6));
 	assertEquals(-1, Arrays.binarySearch(src, -1));
 }
 	@Test
